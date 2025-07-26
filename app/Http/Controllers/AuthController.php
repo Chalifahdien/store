@@ -27,7 +27,7 @@ class AuthController extends Controller
             return back()->withErrors(['email' => 'Email tidak terdaftar.']);
         }
 
-        if (!in_array($user->role, ['admin', 'kasir'])) {
+        if (!in_array($user->role, ['admin', 'user'])) {
             return back()->withErrors(['email' => 'Akun Anda tidak memiliki izin akses.']);
         }
 
